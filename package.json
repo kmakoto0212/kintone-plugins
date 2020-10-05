@@ -1,4 +1,8 @@
 {
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmakoto0212/kintone-plugins"
+  },
   "name": "kintone-plugins",
   "version": "0.1.0",
   "description": "kintone-cliで作成したカスタマイズ＆プラグイン",
