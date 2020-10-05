@@ -31,6 +31,7 @@ Give a ⭐️ if this project helped you!
 ## 📝 License
 
 Copyright © 2020 kmakoto0212
+
 This project is released under the MIT License, see LICENSE.
 
 ***
