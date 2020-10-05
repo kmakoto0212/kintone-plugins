@@ -1,5 +1,13 @@
 {
-    "appName": "一覧印刷プラグイン",
+    "appName": {
+        "ja": "一覧印刷プラグイン",
+        "en": "ViewPrintPlugin"
+    },
+    "description": {
+        "ja": "レコード一覧を印刷しやすいレイアウトで表示できるプラグインです。",
+        "en": "It is a plugin that can display the record list in a layout that is easy to print."
+     },
+    "buildDir": "Print/plugin",
     "type": "Plugin",
     "uploadConfig": {
         "desktop": {
