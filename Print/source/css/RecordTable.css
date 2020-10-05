@@ -1,0 +1,35 @@
+thead {
+  page-break-inside: avoid;
+}
+
+.record-table {
+  background-color: white;
+  table-layout: fixed;
+  padding-right: 30px;
+  box-sizing: border-box;
+  width: 220mm;
+  word-break: normal;
+}
+
+.record-table th, .record-table td {
+  border: solid 1px black;
+  text-overflow: ellipsis;
+  padding: 8px;
+}
+
+.record-table tr{
+  page-break-inside: avoid;
+  padding-bottom: 0.6rem;
+  margin-bottom: -0.6rem;
+}
+
+@media print {
+  .record-table{
+    width: calc(100% - 15px);
+    height: 100%;
+  }
+  table {
+    border-collapse: collapse;
+    transform: translateY(2px); /* 罫線がページ上部にはみ出る不具合に対応 */
+  }
+}

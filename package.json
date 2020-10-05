@@ -1,0 +1,57 @@
+{
+  "name": "kintone-plugins",
+  "version": "0.1.0",
+  "description": "kintone-cliで作成したカスタマイズ＆プラグイン",
+  "author": "kmakoto0212",
+  "license": "MIT",
+  "dependencies": {
+    "@emotion/core": "^10.0.35",
+    "@kintone/kintone-js-sdk": "^0.7.4",
+    "kintone-cli": "git://github.com/kmakoto0212/kintone-cli.git",
+    "react": "^16.8.6",
+    "react-dom": "^16.7.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@cybozu/eslint-config": ">=7.1.0",
+    "@kintone/kintone-ui-component": "^0.7.4",
+    "@kintone/plugin-packer": "^2.0.7",
+    "@kintone/plugin-uploader": "3.0.5",
+    "@kintone/rest-api-client": "^1.5.2",
+    "astroturf": "^0.10.4",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.0.5",
+    "core-js": "^3.2.1",
+    "css-loader": "^2.1.0",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react-hooks": "^4.1.2",
+    "local-web-server": "^2.6.1",
+    "postcss-loader": "^4.0.2",
+    "prettier": "^2.1.2",
+    "prop-types": "^15.7.2",
+    "react-portal-overlay": "^1.0.1",
+    "regenerator-runtime": "^0.13.3",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.2.3"
+  },
+  "scripts": {
+    "dev": "ws",
+    "lint-all": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint-all-fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
+    "build-Print": "webpack --config Print/webpack.config.js",
+    "lint-Print": "eslint Print/ --ext .jsx",
+    "lint-Print-fix": "eslint Print/ --ext .jsx --fix",
+    "package-Print": "webpack --config Print/webpack.config.js --mode production && kintone-cli build --app-name Print",
+    "dev-package-Print": "webpack --config Print/webpack.config.js --mode development && kintone-cli build --app-name Print"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 11",
+    "Android >= 4"
+  ]
+}

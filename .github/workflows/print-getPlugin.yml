@@ -1,0 +1,30 @@
+name: Print-getPlugin
+
+on:
+  workflow_dispatch:
+    branches: [ mastar ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: npm install
+      run: npm install
+    - name: plugin build
+      run: npm run dev-package-Print
+    - uses: actions/upload-artifact@v2
+      with:
+        name: package
+        path: 一覧印刷プラグイン/dist/plugin.zip

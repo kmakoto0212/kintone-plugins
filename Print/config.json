@@ -1,0 +1,28 @@
+{
+    "appName": "一覧印刷プラグイン",
+    "type": "Plugin",
+    "uploadConfig": {
+        "desktop": {
+            "js": [
+                "Print/dist/Print.min.js"
+            ],
+            "css": []
+        },
+        "mobile": {
+            "js": [
+                "Print/dist/Print.min.js"
+            ]
+        },
+        "icon": "Print/icon.png",
+        "config": {
+            "html": "Print/pluginConfig.html",
+            "js": [
+                "Print/dist/config.min.js"
+            ],
+            "css": [
+                "Print/source/css/config.css"
+            ],
+            "required_params": []
+        }
+    }
+}

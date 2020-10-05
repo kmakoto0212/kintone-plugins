@@ -1,0 +1,13 @@
+.body-top {
+  overflow: hidden;
+}
+
+.plint-view-button {
+  display: inline-block;
+}
+
+@media screen {
+  .body-top{
+  overflow: visible;
+  }
+}

@@ -1,0 +1,46 @@
+.plugin-overlay {
+  overflow: visible !important;
+  position: relative;
+}
+
+.view-print-root {
+  height: 100vh;
+  width: 100%;
+}
+
+.view-print-head {
+  display: none;
+}
+
+.view-print-body {
+  position: absolute;
+  width: calc(100% + 15px);
+  background-color: white;
+}
+
+@media screen {
+  .plugin-overlay {
+    overflow: scroll !important;
+  }
+
+  .view-print-head {
+    display: flex;
+    background-color: #d4d7d7;
+    align-items: center;
+    flex-wrap:wrap;
+    padding:24px;
+  }
+
+  .view-print-body {
+    display: block;
+    background-color: #d4d7d7;
+    padding: 24px;
+    padding-right: 30px;
+    box-sizing: border-box;
+  }
+  label {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+}
