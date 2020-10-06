@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, {memo} from 'react';
 import Title from './Title.jsx';
-import {RecordTable} from './RecordTable.jsx';
+import RecordTable from './RecordTable.jsx';
 import '../../css/header.css';
 
 const ViewBody = ({views, records, fields, title, lines}) => {
@@ -20,4 +20,4 @@ const ViewBody = ({views, records, fields, title, lines}) => {
   );
 };
 
-export {ViewBody};
+export default memo(ViewBody);

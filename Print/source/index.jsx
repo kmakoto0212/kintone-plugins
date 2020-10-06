@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {PrintButton} from './js/components/PrintButton.jsx';
+import ViewPrintButton from './js/components/ViewPrintButton.jsx';
 import './css/plugin.css';
 
 (() => {
@@ -17,7 +17,7 @@ import './css/plugin.css';
     button.className = 'plint-view-button';
     kintone.app.getHeaderMenuSpaceElement().append(button);
 
-    ReactDOM.render(<PrintButton viewName={viewName} />, button);
+    ReactDOM.render(<ViewPrintButton viewName={viewName} />, button);
 
     return event;
   });

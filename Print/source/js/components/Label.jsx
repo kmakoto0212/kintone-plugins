@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, {memo} from 'react';
 import '../../css/font.css';
 import '../../css/Label.css';
 
@@ -22,4 +22,4 @@ const Label = ({text, textColor, backgroundColor, isRequired, isVisible, onClick
     </div>
   );
 };
-export {Label};
+export default memo(Label);

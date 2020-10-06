@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, memo} from 'react';
 import {NotifyPopup} from '@kintone/kintone-ui-component';
-import {ViewHead} from './ViewHead.jsx';
-import {ViewBody} from './ViewBody.jsx';
+import ViewHead from './ViewHead.jsx';
+import ViewBody from './ViewBody.jsx';
 
 const Interface = ({viewName, setIsOpen}) => {
   const [views, setViews] = useState(null);
@@ -108,4 +108,4 @@ const Interface = ({viewName, setIsOpen}) => {
   );
 };
 
-export {Interface};
+export default memo(Interface);

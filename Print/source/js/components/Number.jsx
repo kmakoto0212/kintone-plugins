@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, {memo} from 'react';
 import '../../css/font.css';
 import '../../css/Number.css';
 
@@ -27,4 +27,4 @@ const Number = ({value, isDisabled = false, isVisible = true, placeholder = '', 
   );
 };
 
-export {Number};
+export default memo(Number);

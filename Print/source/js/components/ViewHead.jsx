@@ -1,9 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, {memo} from 'react';
 import {Button, Text} from '@kintone/kintone-ui-component';
-import {Label} from './Label.jsx';
-import {Number} from './Number.jsx';
+import Label from './Label.jsx';
+import Number from './Number.jsx';
 import '../../css/Interface.css';
 
 const ViewHead = ({setIsOpen, lines, setLines, title, setTitle}) => {
@@ -43,4 +43,4 @@ const ViewHead = ({setIsOpen, lines, setLines, title, setTitle}) => {
   );
 };
 
-export {ViewHead};
+export default memo(ViewHead);

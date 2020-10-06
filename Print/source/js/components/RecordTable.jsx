@@ -1,6 +1,6 @@
 /* eslint-disable no-shadow */
 /* eslint-disable react/prop-types */
-import React from 'react';
+import React, {memo} from 'react';
 import '../../css/RecordTable.css';
 import {getStringFromDate} from '../util.jsx';
 
@@ -8,7 +8,6 @@ const RecordTable = ({views, records, fields, lines}) => {
   if (!(views && fields && records && lines)) {
     return <p>Loading...</p>;
   }
-
   const fieldCodes = views.fields;
   const tableHead = fieldCodes.map((code, index) => {
     return (
@@ -81,4 +80,4 @@ const RecordTable = ({views, records, fields, lines}) => {
     </>
   );
 };
-export {RecordTable};
+export default memo(RecordTable);
