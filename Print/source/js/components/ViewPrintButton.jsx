@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-import React, {useState} from 'react';
+import React, {useState, memo} from 'react';
 import {Button} from '@kintone/kintone-ui-component';
 import {Overlay} from 'react-portal-overlay';
-import {Interface} from './Interface.jsx';
+import Interface from './Interface.jsx';
 import '../../css/Interface.css';
 
-const PrintButton = ({viewName}) => {
+const ViewPrintButton = ({viewName}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -49,4 +49,4 @@ const PrintButton = ({viewName}) => {
   );
 };
 
-export {PrintButton};
+export default memo(ViewPrintButton);
