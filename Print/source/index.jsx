@@ -6,7 +6,6 @@ import './css/plugin.css';
 
 (() => {
   kintone.events.on('app.record.index.show', (event) => {
-    console.log(document.getElementsByClassName('plint-view-button').length);
     if (event.viewId === 20
       || document.getElementsByClassName('plint-view-button').length
       || event.viewType === 'calendar') {
