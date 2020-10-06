@@ -9,7 +9,7 @@ const Interface = ({viewName, setIsOpen}) => {
   const [fields, setfields] = useState(null);
   const [records, setRecords] = useState(null);
   const [lines, setLines] = useState(1);
-  const [title, setTitle] = useState(undefined);
+  const [title, setTitle] = useState('');
   const [isTimeStamp, setIsTimeStamp] = useState(false);
   const [timeStampFormat, setTimeStampFormat] = useState(undefined);
   const [timeStampString, setTimeStampString] = useState(undefined);
