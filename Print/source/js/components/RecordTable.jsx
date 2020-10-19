@@ -6,7 +6,7 @@ import {getStringFromDate} from '../util.jsx';
 
 const RecordTable = ({views, records, fields, lines}) => {
   if (!(views && fields && records && lines)) {
-    return <p>Loading...</p>;
+    return <p>No Data.</p>;
   }
   const fieldCodes = views.fields;
   const tableHead = fieldCodes.map((code, index) => {
