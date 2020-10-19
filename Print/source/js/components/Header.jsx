@@ -7,19 +7,22 @@ import Label from './Label.jsx';
 import Number from './Number.jsx';
 import '../../css/Interface.css';
 
-const PrintButton = memo(() => {
-  return (
-    <>
-      <Button
-        text="印刷"
-        type="submit"
-        onClick={() => {
-          window.print();
-        }}
-      />
-    </>
-  );
-}, () => true);
+const PrintButton = memo(
+  () => {
+    return (
+      <>
+        <Button
+          text="印刷"
+          type="submit"
+          onClick={() => {
+            window.print();
+          }}
+        />
+      </>
+    );
+  },
+  () => true
+);
 
 const ReturnButton = memo(({setIsOpen}) => {
   return (
@@ -44,7 +47,7 @@ const InputViewLine = memo(({lines, setLines}) => {
           value={lines}
           min="1"
           max="500"
-          onChange={num => setLines((+num || 1) > 500 ? 500 : (+num || 1))}
+          onChange={(num) => setLines((+num || 1) > 500 ? 500 : +num || 1)}
         />
       </label>
     </>
@@ -56,10 +59,7 @@ const InputTitle = memo(({title, setTitle}) => {
     <>
       <label>
         <Label text="タイトル:" fontSize="150%" />
-        <Text
-          value={title}
-          onChange={str => setTitle('' + str)}
-        />
+        <Text value={title} onChange={(str) => setTitle('' + str)} />
       </label>
     </>
   );

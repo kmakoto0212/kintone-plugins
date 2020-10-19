@@ -1,7 +1,12 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/prop-types */
 import React, {memo} from 'react';
-import {PrintButton, ReturnButton, InputViewLine, InputTitle} from './Header.jsx';
+import {
+  PrintButton,
+  ReturnButton,
+  InputViewLine,
+  InputTitle,
+} from './Header.jsx';
 import '../../css/Interface.css';
 
 const ViewHead = ({setIsOpen, lines, setLines, title, setTitle}) => {

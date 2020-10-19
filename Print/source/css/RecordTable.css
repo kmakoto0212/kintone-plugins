@@ -11,20 +11,21 @@ thead {
   word-break: normal;
 }
 
-.record-table th, .record-table td {
+.record-table th,
+.record-table td {
   border: solid 1px black;
   text-overflow: ellipsis;
   padding: 8px;
 }
 
-.record-table tr{
+.record-table tr {
   page-break-inside: avoid;
   padding-bottom: 0.6rem;
   margin-bottom: -0.6rem;
 }
 
 @media print {
-  .record-table{
+  .record-table {
     width: calc(100% - 15px);
     height: 100%;
   }

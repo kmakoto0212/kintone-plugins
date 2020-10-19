@@ -11,12 +11,12 @@ const RecordTable = ({views, records, fields, lines}) => {
   const fieldCodes = views.fields;
   const tableHead = fieldCodes.map((code, index) => {
     return (
-      <th key={`head-${index}`} >
+      <th key={`head-${index}`}>
         <div>{fields[code].label}</div>
       </th>
     );
   });
-  const getStringFromType = (record, type) =>{
+  const getStringFromType = (record, type) => {
     if (!(record && type)) return '';
 
     switch (type) {
@@ -28,13 +28,14 @@ const RecordTable = ({views, records, fields, lines}) => {
       case 'STATUS_ASSIGNEE':
       case 'ORGANIZATION_SELECT':
       case 'GROUP_SELECT':
-        return record.value.map(x => {
-          return x.name;
-        }).join(', ');
+        return record.value
+          .map((x) => {
+            return x.name;
+          })
+          .join(', ');
       case 'CREATED_TIME':
       case 'UPDATED_TIME':
-      case 'DATETIME':
-      {
+      case 'DATETIME': {
         const jstDate = new Date(record.value.replace('Z', '+09:00'));
         const format = 'YYYY/MM/DD hh:mm';
         return getStringFromDate(jstDate, format);
@@ -50,13 +51,18 @@ const RecordTable = ({views, records, fields, lines}) => {
     }
   };
 
-  const TableBody = ({records, codes, lines}) =>{
-    const TableData = ({index, records, codes}) =>{
+  const TableBody = ({records, codes, lines}) => {
+    const TableData = ({index, records, codes}) => {
       return codes.map((code, codeIndex) => {
         return (
           <td key={`body-${index}-${codeIndex}`}>
             <div>
-              {records[index] ? getStringFromType(records[index][code], records[index][code].type) : ' ' }
+              {records[index]
+                ? getStringFromType(
+                    records[index][code],
+                    records[index][code].type
+                  )
+                : ' '}
             </div>
           </td>
         );
@@ -65,7 +71,11 @@ const RecordTable = ({views, records, fields, lines}) => {
 
     const tableRows = [];
     for (let i = 0; i < lines; i++) {
-      tableRows.push(<tr><TableData key={i} index={i} records={records} codes={codes} /></tr>);
+      tableRows.push(
+        <tr>
+          <TableData key={i} index={i} records={records} codes={codes} />
+        </tr>
+      );
     }
 
     return <>{tableRows}</>;
@@ -74,8 +84,17 @@ const RecordTable = ({views, records, fields, lines}) => {
   return (
     <>
       <table className="record-table">
-        <thead><tr key="-1">{tableHead}</tr></thead>
-        <tbody><TableBody records={records} fields={fields} codes={fieldCodes} lines={lines} /></tbody>
+        <thead>
+          <tr key="-1">{tableHead}</tr>
+        </thead>
+        <tbody>
+          <TableBody
+            records={records}
+            fields={fields}
+            codes={fieldCodes}
+            lines={lines}
+          />
+        </tbody>
       </table>
     </>
   );

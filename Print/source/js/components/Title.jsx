@@ -12,7 +12,8 @@ const Title = ({title}) => {
         fontSize="16px"
         isVisible={!!title}
       />
-    </>);
+    </>
+  );
 };
 
 export default memo(Title);

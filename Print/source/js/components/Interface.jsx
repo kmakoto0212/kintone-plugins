@@ -23,41 +23,40 @@ const Interface = ({viewName, setIsOpen}) => {
       const appId = kintone.app.getId();
       const rawQuery = await kintone.app.getQuery();
       const _regex = /limit ([0-9]{1,3})/;
-      const [query, limit] = [rawQuery.replace(_regex, 'limit 500'), rawQuery.match(_regex)[1]];
+      const [query, limit] = [
+        rawQuery.replace(_regex, 'limit 500'),
+        rawQuery.match(_regex)[1],
+      ];
       const [viewsData, fieldsData, recordsData] = await Promise.all([
-        kintone.api(
-          kintone.api.url('/k/v1/app/views', true),
-          'GET',
-          {app: appId},
-        ).catch(e => {
-          setIsError(true);
-          const text = `一覧情報の取得に失敗しました。\n${e.message}`;
-          setErrorText(text);
-          console.error(text);
-        }),
-        kintone.api(
-          kintone.api.url('/k/v1/app/form/fields', true),
-          'GET',
-          {app: appId},
-        ).catch(e => {
-          setIsError(true);
-          const text = `フィールド情報の取得に失敗しました。\n${e.message}`;
-          setErrorText(text);
-          console.error(text);
-        }),
-        kintone.api(
-          kintone.api.url('/k/v1/records', true),
-          'GET',
-          {
+        kintone
+          .api(kintone.api.url('/k/v1/app/views', true), 'GET', {app: appId})
+          .catch((e) => {
+            setIsError(true);
+            const text = `一覧情報の取得に失敗しました。\n${e.message}`;
+            setErrorText(text);
+            console.error(text);
+          }),
+        kintone
+          .api(kintone.api.url('/k/v1/app/form/fields', true), 'GET', {
             app: appId,
-            query
-          },
-        ).catch(e => {
-          setIsError(true);
-          const text = `レコードの取得に失敗しました。\n${e.message}`;
-          setErrorText(text);
-          console.error(text);
-        })
+          })
+          .catch((e) => {
+            setIsError(true);
+            const text = `フィールド情報の取得に失敗しました。\n${e.message}`;
+            setErrorText(text);
+            console.error(text);
+          }),
+        kintone
+          .api(kintone.api.url('/k/v1/records', true), 'GET', {
+            app: appId,
+            query,
+          })
+          .catch((e) => {
+            setIsError(true);
+            const text = `レコードの取得に失敗しました。\n${e.message}`;
+            setErrorText(text);
+            console.error(text);
+          }),
       ]);
 
       if (!unmounted) {

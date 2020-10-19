@@ -27,8 +27,8 @@
     display: flex;
     background-color: #d4d7d7;
     align-items: center;
-    flex-wrap:wrap;
-    padding:24px;
+    flex-wrap: wrap;
+    padding: 24px;
   }
 
   .view-print-body {

@@ -3,8 +3,17 @@ import React, {memo} from 'react';
 import '../../css/font.css';
 import '../../css/Number.css';
 
-const Number = ({value, isDisabled = false, isVisible = true, placeholder = '', min, max, onChange, onClick}) => {
-  const _onChange = event => {
+const Number = ({
+  value,
+  isDisabled = false,
+  isVisible = true,
+  placeholder = '',
+  min,
+  max,
+  onChange,
+  onClick,
+}) => {
+  const _onChange = (event) => {
     onChange && onChange(event.target.value);
   };
 

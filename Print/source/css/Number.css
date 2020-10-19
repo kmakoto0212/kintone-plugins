@@ -17,7 +17,7 @@
 }
 .kuc-input-number:disabled {
   cursor: not-allowed;
-  background-color: #E7E6E6;
+  background-color: #e7e6e6;
   color: #888888;
   box-shadow: none;
 }
