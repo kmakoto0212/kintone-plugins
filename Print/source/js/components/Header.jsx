@@ -47,7 +47,7 @@ const InputViewLine = memo(({lines, setLines}) => {
           value={lines}
           min="1"
           max="500"
-          onChange={(num) => setLines((+num || 1) > 500 ? 500 : +num || 1)}
+          onChange={(num) => setLines(num)}
         />
       </label>
     </>

@@ -8,18 +8,23 @@ const Number = ({
   isDisabled = false,
   isVisible = true,
   placeholder = '',
-  min,
-  max,
+  min = 0,
+  max = Infinity,
   onChange,
   onClick,
 }) => {
-  const _onChange = (event) => {
-    onChange && onChange(event.target.value);
-  };
-
   if (isVisible === false) {
     return null;
   }
+
+  const _onChange = (e) => {
+    const num = e.target.value;
+
+    onChange &&
+      onChange(() => {
+        return (+num || min) > max ? max : +num || min;
+      });
+  };
 
   return (
     <input
