@@ -2,7 +2,7 @@
 import React, {useState, memo} from 'react';
 import {Button} from '@kintone/kintone-ui-component';
 import {Overlay} from 'react-portal-overlay';
-import Interface from './Interface.jsx';
+import ViewRoot from './ViewRoot.jsx';
 import '../../css/Interface.css';
 
 const ViewPrintButton = ({viewName}) => {
@@ -43,7 +43,7 @@ const ViewPrintButton = ({viewName}) => {
           height: '100%',
         }}
       >
-        <Interface viewName={viewName} setIsOpen={setIsOpen} />
+        <ViewRoot viewName={viewName} setIsOpen={setIsOpen} />
       </Overlay>
     </>
   );

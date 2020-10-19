@@ -4,7 +4,7 @@ import {NotifyPopup} from '@kintone/kintone-ui-component';
 import ViewHead from './ViewHead.jsx';
 import ViewBody from './ViewBody.jsx';
 
-const Interface = ({viewName, setIsOpen}) => {
+const ViewRoot = ({viewName, setIsOpen}) => {
   const [views, setViews] = useState(null);
   const [fields, setfields] = useState(null);
   const [records, setRecords] = useState(null);
@@ -107,4 +107,4 @@ const Interface = ({viewName, setIsOpen}) => {
   );
 };
 
-export default memo(Interface);
+export default memo(ViewRoot);
