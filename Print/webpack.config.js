@@ -1,8 +1,14 @@
+/* eslint-disable no-undef */
 const path = require('path');
 const config = {
   entry: path.resolve('Print/source/index.jsx'),
   resolve: {
     extensions: ['.ts', '.jsx', '.js', '.css'],
+    alias: {
+      '@js': path.resolve(__dirname, 'source/js/'),
+      '@css': path.resolve(__dirname, 'source/css/'),
+      '@componets': path.resolve(__dirname, 'source/js/components'),
+    },
   },
   output: {
     path: path.resolve('Print/dist'),
@@ -43,6 +49,11 @@ const configPlugin = {
   entry: path.resolve('Print/source/js/config.jsx'),
   resolve: {
     extensions: ['.ts', '.jsx', '.js'],
+    alias: {
+      '@js': path.resolve(__dirname, 'source/js/'),
+      '@css': path.resolve(__dirname, 'source/css/'),
+      '@componets': path.resolve(__dirname, 'source/js/components'),
+    },
   },
   output: {
     path: path.resolve('Print/dist'),
