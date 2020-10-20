@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ViewPrintButton from './js/components/ViewPrintButton.jsx';
-import './css/plugin.css';
+import ViewPrintButton from '@components/ViewPrintButton';
+import '@css/plugin';
 
 (() => {
   kintone.events.on('app.record.index.show', (event) => {

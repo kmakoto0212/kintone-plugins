@@ -1,8 +1,8 @@
 /* eslint-disable no-shadow */
 /* eslint-disable react/prop-types */
 import React, {memo} from 'react';
-import '../../css/RecordTable.css';
-import {getStringFromDate} from '../util.jsx';
+import '@css/RecordTable';
+import {getStringFromDate} from '@js/util';
 
 const RecordTable = ({views, records, fields, lines}) => {
   if (!(views && fields && records && lines)) {

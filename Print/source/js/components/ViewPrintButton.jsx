@@ -2,8 +2,8 @@
 import React, {useState, memo} from 'react';
 import {Button} from '@kintone/kintone-ui-component';
 import {Overlay} from 'react-portal-overlay';
-import ViewRoot from './ViewRoot.jsx';
-import '../../css/Interface.css';
+import ViewRoot from '@components/ViewRoot';
+import '@css/Interface';
 
 const ViewPrintButton = ({viewName}) => {
   const [isOpen, setIsOpen] = useState(false);

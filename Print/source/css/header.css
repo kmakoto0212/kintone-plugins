@@ -1,3 +1,9 @@
 .header-title {
   text-align: center;
 }
+
+label {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

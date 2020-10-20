@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
 import React, {useState, useEffect, memo} from 'react';
 import {NotifyPopup} from '@kintone/kintone-ui-component';
-import ViewHead from './ViewHead.jsx';
-import ViewBody from './ViewBody.jsx';
+import ViewHead from '@components/ViewHead';
+import ViewBody from '@components/ViewBody';
 
 const ViewRoot = ({viewName, setIsOpen}) => {
   const [views, setViews] = useState(null);

@@ -6,8 +6,8 @@ import {
   ReturnButton,
   InputViewLine,
   InputTitle,
-} from './Header.jsx';
-import '../../css/Interface.css';
+} from '@components/Header';
+import '@css/Interface';
 
 const ViewHead = ({setIsOpen, lines, setLines, title, setTitle}) => {
   return (

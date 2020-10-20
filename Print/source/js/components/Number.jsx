@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, {memo} from 'react';
-import '../../css/font.css';
-import '../../css/Number.css';
+import '@css/font';
+import '@css/Number';
 
 const Number = ({
   value,

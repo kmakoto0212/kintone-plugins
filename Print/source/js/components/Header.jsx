@@ -3,9 +3,9 @@
 /* eslint-disable react/prop-types */
 import React, {memo} from 'react';
 import {Button, Text} from '@kintone/kintone-ui-component';
-import Label from './Label.jsx';
-import Number from './Number.jsx';
-import '../../css/Interface.css';
+import Label from '@components/Label';
+import Number from '@components/Number';
+import '@css/Interface';
 
 const PrintButton = memo(
   () => {

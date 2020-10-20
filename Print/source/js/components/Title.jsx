@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, {memo} from 'react';
-import Label from './Label.jsx';
-import '../../css/header.css';
+import Label from '@components/Label';
+import '@css/header';
 
 const Title = ({title}) => {
   return (
