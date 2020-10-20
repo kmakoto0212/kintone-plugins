@@ -7,7 +7,7 @@ const config = {
     alias: {
       '@js': path.resolve(__dirname, 'source/js/'),
       '@css': path.resolve(__dirname, 'source/css/'),
-      '@componets': path.resolve(__dirname, 'source/js/components'),
+      '@components': path.resolve(__dirname, 'source/js/components'),
     },
   },
   output: {
@@ -52,7 +52,7 @@ const configPlugin = {
     alias: {
       '@js': path.resolve(__dirname, 'source/js/'),
       '@css': path.resolve(__dirname, 'source/css/'),
-      '@componets': path.resolve(__dirname, 'source/js/components'),
+      '@components': path.resolve(__dirname, 'source/js/components'),
     },
   },
   output: {
